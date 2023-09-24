@@ -1,6 +1,6 @@
 import { program } from "commander";
 
-import * as contacts from "./contact.js";
+import * as contacts from "./contacts.js";
 
 program
   .option("-a, --action <type>", "choose action")
@@ -32,10 +32,8 @@ async function invokeAction({ action, id, name, email, phone }) {
         console.warn("\x1B[31m Unknown action type!");
     }
   } catch (error) {
-    console.log(error.message);
-    throw error;
+    throw new Error(`Error occurred: ${error}`);
   }
 }
 
 invokeAction(argv);
-// invokeAction({ action: "list" });

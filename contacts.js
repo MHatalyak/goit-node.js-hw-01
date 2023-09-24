@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import uniqid from "uniqid";
 
-const contactPath = path.resolve("db", "contact.json");
+const contactPath = path.resolve("db", "contacts.json");
 
 const updateContact = (contacts) =>
   fs.writeFile(contactPath, JSON.stringify(contacts, null, 2));

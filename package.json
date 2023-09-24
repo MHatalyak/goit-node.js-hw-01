@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "commander": "^11.0.0",
-    "nanoid": "^5.0.1",
     "uniqid": "^5.4.0"
   }
 }
